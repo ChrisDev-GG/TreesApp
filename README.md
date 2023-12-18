@@ -1,27 +1,60 @@
-# TreesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+# Roket App
+Aplicación de prueba para aplicación a puesto de desarrollador
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ejecutar App Localmente
 
-## Build
+Clonar el proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  git clone <https://link-del-proyecto>
+```
 
-## Running unit tests
+Acceder a la carpeta del proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  cd proyecto
+```
 
-## Running end-to-end tests
+Instalar dependencias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+  npm install
+```
 
-## Further help
+Start the server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  npm run start
+```
+
+Acceder al navegador (localhost)
+```bash
+  http://localhost:3000/
+```
+
+## Running Tests
+
+Es posible ejecutar los test de la api (Jest+Supertest)
+
+```bash
+  npm run test-api
+```
+
+
+## Documentación
+
+La documentación de las herramientas utilizadas:
+
+[Angular](https://v12.angular.io/docs)
+
+[Express](https://expressjs.com/es/starter/installing.html)
+
+[Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+[SweetAlert2](https://sweetalert2.github.io/)
+
+
