@@ -1,16 +1,12 @@
 <div class="mt-5 mb-5 col-8 m-auto">
   <hr>
-  <form [formGroup]="commentsForm" (ngSubmit)="sendComment()">
+  <form [formGroup]="commentsForm" (ngSubmit)="sendComment(selectedTree.arbol_id)">
     <div class="form-group text-center">
       <label for="comment"><b>Comentario:</b></label>
       <textarea formControlName="comment" class="form-control mt-3" id="comment" rows="4"></textarea>
-      <!-- <div *ngIf="commentsForm.controls['comment'].invalid && (commentsForm.controls['comment'].dirty || commentsForm.controls['comment'].touched)" class="text-danger">
-        <div *ngIf="commentsForm.controls['comment'].errors?.required">El comentario es requerido.</div>
-        <div *ngIf="commentsForm.controls['comment'].errors?.maxlength">El comentario no puede exceder los 100 caracteres.</div>
-      </div> -->
     </div>
     <div class="mt-3 mb-3">
-      <button type="submit" class="btn btn-primary d-block m-auto">Enviar Comentario</button>
+      <button type="submit" class="btn btn-primary d-block m-auto" [disabled]="!selectedTree">Enviar Comentario</button>
     </div>
   </form>
 </div>

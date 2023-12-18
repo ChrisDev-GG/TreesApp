@@ -15,8 +15,8 @@ export class TreesButtonComponent implements OnInit {
   selectedTreePhotos: any; // Almacenar las fotos del árbol seleccionado
 
   constructor(
-    private treesDataService: TreesDataService,
-    private transferDataService: TransferTreeDataService
+    private treesDataService: TreesDataService, // Obtener datos de los arboles y sus ubicaciones
+    private transferDataService: TransferTreeDataService // Servicio de transferencia de datos entre compontentes
   ) {
     // Obtencion de los datos de todos los arboles
     this.trees = this.treesDataService.getTreesAndLocationsData();
@@ -26,9 +26,10 @@ export class TreesButtonComponent implements OnInit {
     this.selectedTree = 'default'; // Establecer el primer elemento por defecto
   }
 
-  /* ===================================================
-  ** Función para seleccionar un árbol y emitir su valor
-  ** --
+  /*
+  ** Función para seleccionar un árbol y enviar su valor a otros componentes mediante servicios
+  ** @param event: Event - Evento de selección de un árbol
+  ** @return void - No retorna ningún valor
   */
   onTreeSelected(event:Event): void {
     this.treesDataService.getTreePhotosByIdData(this.selectedTree.arbol_id).subscribe(treePhotos => {

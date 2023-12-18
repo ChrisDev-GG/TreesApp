@@ -11,8 +11,7 @@ export class CommentsForTreesService {
 
   constructor(private http: HttpClient) {}
 
-  sendComments(comentario: string, id: number): Observable<any> {
-    const body = { comentario, id };
-    return this.http.post<any>(`${this.baseUrl}/send-comment`, body);
+  sendComments(comment: string, id: number): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/send-comments/${id}`, {'comment' : comment});
   }
 }

@@ -15,7 +15,7 @@ export class TreesImageComponent implements OnInit {
   defaultUrl: string|null;
 
   constructor(
-    private transferDataService: TransferTreeDataService
+    private transferDataService: TransferTreeDataService // Servicio de transferencia de datos entre compontentes
   ) {
     this.defaultUrl = "https://img.freepik.com/free-vector/404-error-with-landscape-concept-illustration_114360-7898.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702684800&semt=ais";
   }
