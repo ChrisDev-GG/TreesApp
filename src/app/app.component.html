@@ -1,24 +1,11 @@
-<div class="wrapper">
-  <h1 class="title">Angular Router</h1>
-  <nav>
-    <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
-    <a routerLink="/superheroes" routerLinkActive="active">Heroes</a>
-    <a routerLink="/admin" routerLinkActive="active">Admin</a>
-    <a routerLink="/login" routerLinkActive="active">Login</a>
-    <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
-  </nav>
-  <div *ngIf="trees | async as data">
-    <pre>{{ data | json }}</pre> <!-- Muestra los datos en el HTML -->
+<div class="wrapper container pt-4">
+  <h1 class="title pb-4 text-center">Roket - TreesApp</h1>
+  <app-trees-button></app-trees-button>
+  <div class="container">
+    <div class="row">
+      <app-trees-image class="col-12 col-md-6"></app-trees-image>
+      <app-trees-map class="col-12 col-md-6"></app-trees-map>
+      <app-trees-comment class="col-12"></app-trees-comment>
+    </div>
   </div>
-  <div *ngIf="locations | async as data2">
-    <pre>{{ data2 | json }}</pre> <!-- Muestra los datos en el HTML -->
-  </div>
-  <div *ngIf="photos | async as data3">
-    <pre>{{ data3 | json }}</pre> <!-- Muestra los datos en el HTML -->
-  </div>
-
-  <div>
-    <router-outlet #routerOutlet="outlet"></router-outlet>
-  </div>
-  <router-outlet name="popup"></router-outlet>
 </div>

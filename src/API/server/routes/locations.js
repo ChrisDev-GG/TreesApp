@@ -3,6 +3,7 @@ const pool = require('../db');
 
 const router = express.Router();
 
+// Obtener todas las ubicaciones de la base de datos
 router.get('/locations', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT * FROM roket.ubicaciones');

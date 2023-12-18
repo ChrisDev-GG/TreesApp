@@ -1,0 +1,8 @@
+<div class="container w-75">
+  <select class="form-control" [(ngModel)]="selectedTree" (change)="onTreeSelected($event)">
+    <option value="default" disabled>Selector de árboles</option>
+    <option *ngFor="let tree of trees | async; index as i" [ngValue]="tree">
+      {{i+1}}. {{ tree.nombre_arbol }}
+    </option>
+  </select>
+</div>

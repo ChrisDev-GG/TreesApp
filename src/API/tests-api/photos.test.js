@@ -23,4 +23,14 @@ describe('Test de la API Express', () => {
       expect(response.body).toHaveLength(12); // Verificar la cantidad de fotos
     });
   });
+
+  /* Test para verificar obtención de todos las fotos de un arbol especifico */
+  describe('TREES API TESTING', () => {
+    it('Obtener todos las ubicaciones', async () => {
+      const response = await supertest(server).get('/photos-for/1');
+      expect(response.status).toBe(200);     // Verificar obtención del recurso
+      expect(response.body).toHaveLength(3); // Verificar la cantidad de fotos
+    });
+  });
+
 });

@@ -27,6 +27,9 @@ export class TreesDataService {
     return this.http.get<any>(`${this.baseUrl}/trees-and-locations`);
   }
   getTreeAndLocationByIdData(id:BigInteger): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/trees-and-location/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/tree-and-location/${id}`);
+  }
+  getTreePhotosByIdData(id:BigInteger): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/photos-for/${id}`);
   }
 }
